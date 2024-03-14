@@ -1,0 +1,152 @@
+[
+  {
+    "ContainingType": "cadastroWeb.Controllers.FuncController",
+    "Method": "Get",
+    "RelativePath": "api/Func",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "cadastroWeb.Models.ServiceResponse\u00601[[System.Collections.Generic.List\u00601[[cadastroWeb.Models.FuncModel, cadastroWeb, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "cadastroWeb.Controllers.FuncController",
+    "Method": "CriarFunc",
+    "RelativePath": "api/Func",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "func",
+        "Type": "cadastroWeb.Models.FuncModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "cadastroWeb.Models.ServiceResponse\u00601[[System.Collections.Generic.List\u00601[[cadastroWeb.Models.FuncModel, cadastroWeb, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "cadastroWeb.Controllers.FuncController",
+    "Method": "Delete",
+    "RelativePath": "api/Func",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "cadastroWeb.Models.ServiceResponse\u00601[[System.Collections.Generic.List\u00601[[cadastroWeb.Models.FuncModel, cadastroWeb, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "cadastroWeb.Controllers.FuncController",
+    "Method": "GetById",
+    "RelativePath": "api/Func/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "cadastroWeb.Models.ServiceResponse\u00601[[cadastroWeb.Models.FuncModel, cadastroWeb, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "cadastroWeb.Controllers.FuncController",
+    "Method": "Inativa",
+    "RelativePath": "api/Func/InativFunc",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "cadastroWeb.Models.ServiceResponse\u00601[[System.Collections.Generic.List\u00601[[cadastroWeb.Models.FuncModel, cadastroWeb, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "cadastroWeb.Controllers.FuncController",
+    "Method": "Update",
+    "RelativePath": "api/Func/UpdateFunc",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "func",
+        "Type": "cadastroWeb.Models.FuncModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "cadastroWeb.Models.ServiceResponse\u00601[[System.Collections.Generic.List\u00601[[cadastroWeb.Models.FuncModel, cadastroWeb, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  }
+]

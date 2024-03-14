@@ -1,0 +1,46 @@
+<mat-card>
+    <h1>{{btnTitulo}}</h1>
+
+    <form [formGroup]="funcionarioForm" (ngSubmit)="submit()" #formDir="ngForm">
+        <input type="hidden" formControlName="id">
+        <div class="input-box">
+            <mat-form-field class="example-full-width">
+                <mat-label for="">Nome:</mat-label>
+                <input matInput type="text" formControlName="nome" placeholder="digite seu nome" required>
+            </mat-form-field>
+        </div>
+        <div class="input-box">
+            <mat-form-field class="example-full-width">
+                <mat-label for="">Sobrenome:</mat-label>
+                <input matInput type="text" formControlName="sobrenome" placeholder="digite seu sobrenome" required>
+            </mat-form-field>
+        </div>
+        <div class="input-box">
+            <mat-form-field>
+                <mat-label for="">Derpartamento:</mat-label>
+                <mat-select id="derpartamento" formControlName="derpartamento" required>
+                <mat-option value="RH">RH</mat-option>
+                <mat-option value="FINANCEIRO">FINANCEIRO</mat-option>
+                <mat-option value="DIRETORIA">COMPRAS</mat-option>
+                <mat-option value="TECNOLOGIA">TECNOLOGIA</mat-option>  
+            </mat-select>
+            </mat-form-field>
+        </div>
+        <div class="input-box">
+            <mat-form-field>
+                <mat-label for="">Turno:</mat-label>
+                <mat-select id="turno" formControlName="turno" required>
+                    <mat-option value="Dia">Dia</mat-option>
+                    <mat-option value="Tarde">Tarde</mat-option>
+                    <mat-option value="Noite">Noite</mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+    
+        <div class="btn-box">
+            <button type="submit" [disabled]="!funcionarioForm.valid" mat-raised-button color="accent" >{{btnAcao}} </button>
+            <button routerLink="" mat-raised-button>Voltar</button>
+        </div>
+    
+    </form>
+</mat-card>

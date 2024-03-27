@@ -31,4 +31,12 @@ export class DetalhesComponent {
       this.router.navigate(['']);
     });
   }
-}
+  
+   AtivarFuncionario(){
+    this.funcionarioService.AtivaFuncionario(this.id).subscribe((data) => {
+      this.router.navigate(['']);
+    });
+  }
+  
+
+   }

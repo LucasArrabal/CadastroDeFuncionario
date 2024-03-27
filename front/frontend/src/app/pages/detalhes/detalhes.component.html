@@ -55,7 +55,11 @@
             </div>
     
             <div class="btn-box">
-                <button mat-raised-button color="warn" (click)="InativarFuncionario()">Inativar</button>
+                <button *ngIf="funcionario.ativo == false; else inativo" mat-raised-button color="primary" (click)="AtivarFuncionario()">Ativar</button>
+                <ng-template #inativo>
+                    <button  mat-raised-button color="warn" (click)="InativarFuncionario()">Inativar</button>
+                </ng-template>
+                
                 <button mat-raised-button routerLink="">Voltar</button>
             </div>
         </form>

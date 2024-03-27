@@ -106,7 +106,34 @@ namespace cadastroWeb.Service.FuncService
             }
             return serviceResponse;
         }
+        public async Task<ServiceResponse<List<FuncModel>>> AtivaFunc(int id)
+        {
+            ServiceResponse<List<FuncModel>> serviceResponse = new ServiceResponse<List<FuncModel>>();
 
+            try
+            {
+                FuncModel func = _context.Funcionarios.FirstOrDefault(x => x.Id == id);
+                if (func == null)
+                {
+                    serviceResponse.Dados = null;
+                    serviceResponse.Mensagem = "Usuario não encontrado";
+                    serviceResponse.Sucesso = false;
+                }
+                func.Ativo = true;
+                func.DtDeAlteracao = DateTime.Now.ToLocalTime();
+
+                _context.Funcionarios.Update(func);
+                await _context.SaveChangesAsync();
+
+                serviceResponse.Dados = _context.Funcionarios.ToList();
+            }
+            catch (Exception ex)
+            {
+                serviceResponse.Mensagem = ex.Message;
+                serviceResponse.Sucesso = false;
+            }
+            return serviceResponse;
+        }
         public async Task<ServiceResponse<List<FuncModel>>> InativaFunc(int id)
         {
             ServiceResponse<List<FuncModel>> serviceResponse = new ServiceResponse<List<FuncModel>>();

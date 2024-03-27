@@ -47,6 +47,15 @@ namespace cadastroWeb.Controllers
 
 
         }
+        [HttpPut("AtivaFunc")]
+        public async Task<ActionResult<ServiceResponse<List<FuncModel>>>> Ativa(int id)
+        {
+            ServiceResponse<List<FuncModel>> serviceResponse = await _funcInterface.AtivaFunc(id);
+            return Ok(serviceResponse);
+
+
+        }
+        
         [HttpDelete]
         public async Task<ActionResult<ServiceResponse<List<FuncModel>>>> Delete(int id)
         {
